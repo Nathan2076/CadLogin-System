@@ -11,7 +11,7 @@ class User
         
         // Prepara consulta SQL para buscar usuário pelo email
         $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = :email");
-        $stmt->execute(["email" => $email]);
+        $stmt->execute([":email" => $email]);
         
         // Retorno de dados do usuário encontrado como um array associativo
         return $stmt->fetch(PDO::FETCH_ASSOC);
