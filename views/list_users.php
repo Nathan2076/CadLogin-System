@@ -27,7 +27,7 @@ if (isset($_SESSION["perfil"])):
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($user as $user): ?>
+                <?php foreach($users as $user): ?>
                 <tr>
                     <td><?= $user["id"] ?></td>
                     <td><?= $user["nome"] ?></td>
@@ -45,7 +45,7 @@ if (isset($_SESSION["perfil"])):
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="" class="btn">Voltar ao Dashboard</a>
+        <a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a>
     </div>
 </body>
 </html>
