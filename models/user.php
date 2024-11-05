@@ -53,6 +53,13 @@ class User
 
         $stmt->execute($data);
     }
+
+    // Função para exclusão de usuário pelo ID
+    public static function delete($id) {
+        $conn = Database::getConnection();
+        $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = :id");
+        $stmt->execute(["id" => $id]);
+    }
 }
 
 ?>
