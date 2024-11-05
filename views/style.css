@@ -33,7 +33,7 @@ input, select {
     background-color: white;
 }
 
-#submit {
+#submit, .btn {
     background-color: #4F91F5;
     border: none;
     padding: 5px 40px;
@@ -41,9 +41,28 @@ input, select {
     font-weight: 400;
     color: #fff;
     font-size: 18px;
+    text-decoration: none;
+    width: fit-content;
+    text-align: center;
 }
 
 #submit:hover {
     cursor: pointer;
     background-color: #3060a7;
+}
+
+.edit {
+    padding: 2px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.delete {
+    padding: 2px;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
 }

@@ -11,7 +11,7 @@ Este trabalho avaliativo de PHP da disciplina de Programação Web II envolve o 
 Este projeto utiliza o padrão MVC. Por isso, ele é separado em Models, Views e Controllers.
 As Views são o front-end. Quando o usuário dá um input, essa informação é levada para o Controller, que as transporta para o Model, que processa a informação (back-end). Quando o Model as processa, o output é levado para o Controller e, finalmente, para as Views.
 
-Atualmente, os formulários de cadastro e login estão estilizados, com um script de verificação de credenciais localizado em `controllers/AuthController.php`, que utiliza métodos como (`password_verify()`)[https://www.php.net/manual/pt_BR/function.password-verify.php] e o (Operador de Resolução de Escopo)[https://www.php.net/manual/pt_BR/language.oop5.paamayim-nekudotayim.php].
+Atualmente, todas as páginas estão estilizadas. Os formuláros de cadastro e login usam um script de verificação de credenciais localizado em `controllers/AuthController.php`, que utiliza métodos como [`password_verify()`](https://www.php.net/manual/pt_BR/function.password-verify.php) e o [Operador de Resolução de Escopo](https://www.php.net/manual/pt_BR/language.oop5.paamayim-nekudotayim.php).
 
 ## Tecnologias Utilizadas
 

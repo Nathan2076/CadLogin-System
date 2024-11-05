@@ -11,12 +11,12 @@ if (isset($_SESSION["perfil"])):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
-    <link rel="stylesheet" type='text/css' media='screen' href="css/list.css"> <!-- Link para o arquivo CSS -->
+    <style><?php include "style.css" ?></style>
 </head>
 <body class="<?= $_SESSION['perfil'] ?>"> <!-- Define a classe com base no perfil do usuário -->
-    <div class="container">
-        <h2>Lista de Usuários</h2>
-        <table class="styled-table">
+    <main>
+        <h2>Lista de Usuários<br><br></h2>
+        <table class="users">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -35,18 +35,18 @@ if (isset($_SESSION["perfil"])):
                     <td><?= $user["perfil"] ?></td>
                     <td>
                         <?php if ($_SESSION["perfil"] == "admin" || $_SESSION["perfil"] == "gestor"): ?>
-                            <a href="index.php?action=edit?id=<?= $user["id"] ?>">Editar</a>
+                            <a href="index.php?action=edit?id=<?= $user["id"] ?>" class="edit">Editar</a>
                         <?php endif; ?>
                         <?php if ($_SESSION["perfil"] == "admin"): ?>
-                            <a href="">Excluir</a>
+                            <a href="" class="delete">Excluir</a>
                         <?php endif; ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a>
-    </div>
+        <p align="center"><br><br><a href="index.php?action=dashboard" class="btn">Voltar ao Dashboard</a></p>
+    </main>
 </body>
 </html>
 
