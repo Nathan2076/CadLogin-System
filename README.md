@@ -13,6 +13,9 @@ As Views são o front-end. Quando o usuário dá um input, essa informação é 
 
 Atualmente, todas as páginas estão estilizadas. Os formuláros de cadastro e login usam um script de verificação de credenciais localizado em `controllers/AuthController.php`, que utiliza métodos como [`password_verify()`](https://www.php.net/manual/pt_BR/function.password-verify.php) e o [Operador de Resolução de Escopo](https://www.php.net/manual/pt_BR/language.oop5.paamayim-nekudotayim.php).
 
+
+operador ternario
+
 ## Tecnologias Utilizadas
 
 - ✅ PHP

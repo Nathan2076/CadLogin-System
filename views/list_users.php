@@ -38,7 +38,7 @@ if (isset($_SESSION["perfil"])):
                             <a href="index.php?action=edit?id=<?= $user["id"] ?>" class="edit">Editar</a>
                         <?php endif; ?>
                         <?php if ($_SESSION["perfil"] == "admin"): ?>
-                            <a href="" class="delete">Excluir</a>
+                            <a href="index.php?action=delete&id=<?= $user["id"] ?>" class="delete" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                         <?php endif; ?>
                     </td>
                 </tr>
