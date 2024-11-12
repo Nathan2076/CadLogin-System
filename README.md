@@ -13,8 +13,17 @@ As Views são o front-end. Quando o usuário dá um input, essa informação é 
 
 Atualmente, todas as páginas estão estilizadas. Os formuláros de cadastro e login usam um script de verificação de credenciais localizado em `controllers/AuthController.php`, que utiliza métodos como [`password_verify()`](https://www.php.net/manual/pt_BR/function.password-verify.php) e o [Operador de Resolução de Escopo](https://www.php.net/manual/pt_BR/language.oop5.paamayim-nekudotayim.php).
 
+Uma funcionalidade notável é a utilização de [operadores ternários](https://www.php.net/manual/pt_BR/language.operators.comparison.php#language.operators.comparison.ternary) no arquivo `edit_user.php`:
 
-operador ternario
+```php
+<select name="perfil" id="perfil">
+    <option value="admin" <?= $user["perfil"] == "admin" ? "selected" : "" ?>>Admin</option>
+    <option value="gestor" <?= $user["perfil"] == "gestor" ? "selected" : "" ?>>Gestor</option>
+    <option value="colaborador" <?= $user["perfil"] == "colaborador" ? "selected" : "" ?>>Colaborador</option>
+</select>
+```
+
+Essa abordagem permite que o código seja compacto e fácil de ler, ao substituir a função de um `if` simples.
 
 ## Tecnologias Utilizadas
 
